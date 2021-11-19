@@ -2,7 +2,7 @@
 
 pkgname=tuterm
 pkgver=0.3.0
-pkgrel=1
+pkgrel=2
 pkgdesc='A better way to learn CLI programs.'
 arch=('any')
 url='https://github.com/veracioux/tuterm'
@@ -11,6 +11,7 @@ depends=('bash' 'readline')
 optdepends=('asciinema')
 source=("$pkgname-$pkgver.tar.gz::https://github.com/veracioux/tuterm/archive/v${pkgver}.tar.gz")
 sha512sums=('bb54ac58043d2a9b8c3b57e8bfa9a9be35c4b664b947808fa2b5988dc12f515b8679da6245bd04752c01474251fd8d064d654c2f53154fd08e275eefc3abbc9c')
+backup=("etc/${pkgname}/config.sh")
 
 prepare() {
   cd ${pkgname}-${pkgver}
