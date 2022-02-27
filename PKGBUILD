@@ -2,7 +2,7 @@
 
 pkgname=tuterm
 pkgver=0.3.0
-pkgrel=2
+pkgrel=3
 pkgdesc='A better way to learn CLI programs.'
 arch=('any')
 url='https://github.com/veracioux/tuterm'
