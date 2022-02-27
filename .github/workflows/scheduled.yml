@@ -34,7 +34,7 @@ jobs:
           pacman -Syu --needed --noconfirm && \
           pacman -S --needed --noconfirm git binutils pacman-contrib openssh rsync
         env:
-          patched_glibc: glibc-linux4-2.33-4-x86_64.pkg.tar.zst
+          patched_glibc: glibc-linux4-2.33-5-x86_64.pkg.tar.zst
 
       - name: Checkout Repository
         uses: actions/checkout@v2
