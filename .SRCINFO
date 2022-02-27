@@ -1,7 +1,7 @@
 pkgbase = tuterm
 	pkgdesc = A better way to learn CLI programs.
 	pkgver = 0.3.0
-	pkgrel = 2
+	pkgrel = 3
 	url = https://github.com/veracioux/tuterm
 	arch = any
 	license = MIT
