@@ -31,8 +31,6 @@ jobs:
         run: |
           pacman -Syu --needed --noconfirm && \
           pacman -S --needed --noconfirm git binutils pacman-contrib openssh rsync
-        env:
-          patched_glibc: glibc-linux4-2.33-5-x86_64.pkg.tar.zst
 
       - name: Checkout Repository
         uses: actions/checkout@v2
@@ -64,11 +62,11 @@ jobs:
           rsync --progress --delete -r --exclude={'*.gz','*.xz','.github','pkg','src','.git'} ${buildDir}/ ${githubRepoDir}/
           rsync --progress --delete -r --exclude={'*.gz','*.xz','.github','pkg','src','.git'} ${buildDir}/ ${aurRepoDir}/
 
-          # cd ${aurRepoDir}
+          cd ${aurRepoDir}
 
-          # git add .
-          # git diff --quiet --exit-code --cached || git commit -m "${aurCommitMessage}"
-          # git push origin master
+          git add .
+          git diff --quiet --exit-code --cached || git commit -m "${aurCommitMessage}"
+          git push origin master
 
           cd ${githubRepoDir}
 
